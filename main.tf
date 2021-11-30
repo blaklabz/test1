@@ -2,13 +2,17 @@ provider "aws" {
   region = "us-east-1"
 }
 
+variable "ami_id" {
+  type = string
+}
+
 
 module "ec2_instance" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "~> 3.0"
 
   name = "single-instance"
-  #ami                    = "ami-0747bdcabd34c712a"
+  ami                    = "$ami_id"
   instance_type          = "t2.micro"
   key_name               = "cloud-blak2"
   monitoring             = true
