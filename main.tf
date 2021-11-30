@@ -8,7 +8,7 @@ module "ec2_instance" {
   version = "~> 3.0"
 
   name = "single-instance"
-  ami                    = "ami-0747bdcabd34c712a"
+  #ami                    = "ami-0747bdcabd34c712a"
   instance_type          = "t2.micro"
   key_name               = "cloud-blak2"
   monitoring             = true
