@@ -2,10 +2,6 @@ provider "aws" {
   region = "us-east-1"
 }
 
-variable "ami_id" {
-  type = string
-}
-
 
 module "ec2_instance" {
   source  = "terraform-aws-modules/ec2-instance/aws"
